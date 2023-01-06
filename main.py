@@ -6,7 +6,7 @@ def main():
 
 	ruta = "/home/leodan52/Escritorio/"
 
-	file_entrada = "anime_invierno_2022.txt"
+	file_entrada = "anime_invierno_2023.txt"
 	file_salida = "salida.txt"
 
 	agnio = year_(file_entrada)
@@ -50,7 +50,7 @@ def pBloque1(File,lista):
 	print("\nLos animes que se estrenan en la siguiente temporada son:\n", file=File)
 
 	for i in lista:
-		print("\t" + i.nombre, file=File)
+		imprimirAnime(i, File)
 
 def pBloque2(File,lista):
 
@@ -80,7 +80,7 @@ def pBloque2(File,lista):
 
 		for j in lista:
 			if j.plataforma == i:
-				print("\t" + j.nombre,file=File)
+				imprimirAnime(j, File)
 
 def pBloque3(File,lista):
 
@@ -93,7 +93,7 @@ def pBloque3(File,lista):
 		if i.f_estreno != aux:
 			print("\n" + i.f_estreno + "\n",file=File)
 			aux = i.f_estreno
-		print("\t" + i.nombre, file=File)
+		imprimirAnime(i, File, mostrar_plataforma=True)
 
 def pBloque4(File,lista):
 
@@ -177,6 +177,19 @@ def year_(cadena):
 	aux = cadena.replace(".txt","").split("_")
 
 	return aux[2]
+
+
+def imprimirAnime(anime, File, mostrar_plataforma=False):
+	if anime.shortname == "None":
+		print("\t" + f'{anime.nombre}', file=File, end=" ")
+	else:
+		print("\t" + f'{anime.nombre} \t ({anime.shortname})', file=File, end=" ")
+
+
+	if mostrar_plataforma and anime.plataforma != "Por definir":
+		print(f' (En {anime.plataforma})', file=File)
+	else:
+		print(file=File)
 
 
 class anime_emision:
