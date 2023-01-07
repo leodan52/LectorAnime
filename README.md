@@ -47,7 +47,7 @@ Con estos pasos realizados, es posible comenzar a utilizar el gestor.
 
 ### Salida del módulo
 
-La salida del módulo es un archivo TXT llamado *salida.txt*. Esta contiene información crucial para gestionar la watchlist de la temporadal. El contenido del TXT está dividido en 4 bloques:
+La salida del módulo es un archivo TXT llamado *salida.txt*. Esta contiene información crucial para gestionar la watchlist de la temporada. El contenido del TXT está dividido en 4 bloques:
 
 1. Bloque lista.
 
@@ -85,17 +85,17 @@ Este bloque es bastante simple, ya que es solo una lista ordenada. El bloque tie
 
 #### Bloque plataforma
 
-Se pueden definir animes con diferentes plataformas de visualización, y cada una tendrá una división. Las plataformas también se ordenarán alfabéticamente, y la primera de la lista se listará de la siguiente forma,
+Se pueden definir animes con diferentes plataformas de visualización, y cada una tendrá una división. Las plataformas también se ordenarán alfabéticamente, y la primera de la de ellas se listará de la siguiente forma,
 
 > ~~~
 >
-> De los cuales, en PrimeraPlataforma se veran:
+> De los cuales, en PrimeraPlataforma se verán:
 >
 > 	Título 1
 > 	Título 2
 > ~~~
 
-dando una continuación lógica al bloque anterior. Las siguietes tendrán un formato un tanto diferente,
+dando una continuación lógica al bloque anterior. Las siguientes tendrán un formato un tanto diferente,
 
 > ~~~
 >
@@ -172,7 +172,7 @@ Ya que el ancho de cada columna se adapta a los nombres listados, se recomienda 
 
 ### Watchlist ejemplo
 
-Vemaos un ejemplo. El archivo `anime_otoño_2021.txt` contiene la watchlist de la temporada anime otoño 2021, como su nombre lo indica. El archivo lista 20 títulos diferentes:
+Veamos un ejemplo. El archivo `anime_otoño_2021.txt` contiene la watchlist de la temporada anime otoño 2021, como su nombre lo indica. El archivo lista 20 títulos diferentes:
 > ~~~
 > > 86: Eighty Six (2da temp)................................................ 2 octubre ....... Crunchyroll ..... shortname: 86: Eighty Six
 > Blue Period................................................................ 2 octubre ....... Netflix
@@ -199,7 +199,7 @@ Vemaos un ejemplo. El archivo `anime_otoño_2021.txt` contiene la watchlist de l
 
 El uso de uno varios puntos como separador es bastante conveniente para darle a la lista un aspecto más legible, usando fuente monoespaciada. Esto ayuda cuando hay nombres muy largos, que no es poco común en la industria. Nótese también que los títulos especialmente largos tienen definido el nombre corto; en algunos caso también se usa para dejar de lado el subtítulo.
 
-Ahora solo es cuestión de preparar el módulo y ejecutar el módulo, con lo cual obtendremos el archivo `salida..txt`, con el siguiente contenido:
+Ahora solo es cuestión de preparar el módulo y ejecutarlo, con lo cual obtendremos el archivo `salida.txt`, con el siguiente contenido:
 
 > ~~~
 >
