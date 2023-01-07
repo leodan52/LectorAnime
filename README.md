@@ -1,6 +1,15 @@
 # LectorAnime
 
-Este módulo ayuda a gestionar la lista de visualización —*watchlist*, por su nombre en inglés— por temporada televisiva, de aquellos amantes de la animación japonesa.
+Este módulo ayuda a gestionar la lista de visualización —*watchlist*, por su nombre en inglés— por temporada televisiva, de aquellos amantes de la animación japonesa. El módulo está escrito en Python y se apoya de los módulos
+
+- `datetime`
+- y `tabulate`,
+
+los cuales son necesario instalar. Puedes hacerlo mediante el siguiente comando,
+
+> ~~~
+> pip instalar datetime tabulate
+> ~~~
 
 ## Introducción: ¿Cómo funcionan las temporadas anime?
 
@@ -13,7 +22,7 @@ Cada serie suele comenzar a emitir entre la primera o segunda semana —salvo al
 
 ### Preparando el módulo
 
-El módulo escrito en Python obtiene la watchlist de un archivo TXT. El nombre del archivo debe tener un formato específico,
+El módulo obtiene la watchlist de un archivo TXT. El nombre del archivo debe tener un formato específico,
 
 > anime\_SEASON\_YEAR.txt,
 
@@ -174,7 +183,7 @@ Ya que el ancho de cada columna se adapta a los nombres listados, se recomienda 
 
 Veamos un ejemplo. El archivo `anime_otoño_2021.txt` contiene la watchlist de la temporada anime otoño 2021, como su nombre lo indica. El archivo lista 20 títulos diferentes:
 > ~~~
-> > 86: Eighty Six (2da temp)................................................ 2 octubre ....... Crunchyroll ..... shortname: 86: Eighty Six
+> 86: Eighty Six (2da temp)................................................ 2 octubre ....... Crunchyroll ..... shortname: 86: Eighty Six
 > Blue Period................................................................ 2 octubre ....... Netflix
 > Build Divide: Code Black................................................... 10 octubre ...... Crunchyroll ..... shortname: Build Divide
 > Deep Insanity: The Lost Child.............................................. 13 octubre ...... AnimeLegal  ...... shortname: Deep Insanity
