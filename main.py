@@ -6,44 +6,44 @@ def main():
 
 	ruta = "/home/leodan52/Escritorio/"
 
-	file_entrada = "anime_invierno_2023.txt"
+	file_entrada = "anime_verano_2023.txt"
 	file_salida = "salida.txt"
 
 	agnio = year_(file_entrada)
 
-	entrada = open( ruta + file_entrada, "r")
+	with open( ruta + file_entrada, "r") as entrada:
 
-	animes = []
+		animes = []
 
-	for i in entrada:
-		anime = process(i)
+		for i in entrada:
+			anime = process(i)
 
-		aux = anime_emision(anime[0])
+			aux = anime_emision(anime[0])
 
-		for j in anime:
-			if j.find("shortname:") == 0:
-				aux2 = j.replace("shortname:","").strip()
-				aux.nombre_corto(aux2)
-				anime.remove(j)
+			for j in anime:
+				if j.find("shortname:") == 0:
+					aux2 = j.replace("shortname:","").strip()
+					aux.nombre_corto(aux2)
+					anime.remove(j)
 
-		try:
-			aux.fecha_estreno(anime[1] + " " + agnio)
-		except IndexError:
-			pass
+			try:
+				aux.fecha_estreno(anime[1] + " " + agnio)
+			except IndexError:
+				pass
 
-		try:
-			aux.Plataforma(anime[2])
-		except IndexError:
-			pass
+			try:
+				aux.Plataforma(anime[2])
+			except IndexError:
+				pass
 
-		animes.append(aux)
+			animes.append(aux)
 
-	salida = open(file_salida, "w")
+	with open(file_salida, "w") as salida:
 
-	pBloque1(salida,animes)
-	pBloque2(salida,animes)
-	pBloque3(salida,animes)
-	pBloque4(salida,animes)
+		pBloque1(salida,animes)
+		pBloque2(salida,animes)
+		pBloque3(salida,animes)
+		pBloque4(salida,animes)
 
 def pBloque1(File,lista):
 	lista = ordenar(lista,0)
